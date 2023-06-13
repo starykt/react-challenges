@@ -25,9 +25,9 @@ export default function TodoList() {
             alt="Gregorio Y. Zara"
           />
 
-          <li>Improve the videophone</li>
-          <li>Prepare aeronautics lectures</li>
-          <li>Work on the alcohol-fuelled engine</li>
+          <li class="la">Improve the videophone</li>
+          <li class="la">Prepare aeronautics lectures</li>
+          <li class="la">Work on the alcohol-fuelled engine</li>
         </div>
       </div>
     </div>
