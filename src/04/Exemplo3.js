@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./base.css";
 
 export default function Accordion() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div classNameName='container'>
-    <Link to="/" classNameName='btn-voltar'>Voltar</Link>
-    <div classNameName='div-test'>
-      <h2>Raimundo, Nicole</h2>
+    <div className='container'>
+    <Link to="/" className='btn-voltar'>Voltar</Link>
+    <div className='div-test'>
+      <h2>Moreno, Gabrela</h2>
       <Panel
         title="About"
         isActive={activeIndex === 0}
@@ -34,12 +35,12 @@ function Panel({
   onShow
 }) {
   return (
-    <section classNameName="panel">
+    <section className="panel">
       <h3>{title}</h3>
       {isActive ? (
         <p>{children}</p>
       ) : (
-        <button classNameName='botao' onClick={onShow}>
+        <button className='base-btn' onClick={onShow}>
           Show
         </button>
       )}

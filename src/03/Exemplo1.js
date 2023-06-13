@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import "./base.css";
 
 function Button({ onClick, children }) {
   return (
@@ -18,8 +19,8 @@ function ToolBar({ onPlayMovie, onUploadImage }) {
     <div className='container'>
     <Link to="/" className='btn-voltar'>Voltar</Link>
 <div className="div-test">
-      <button className="botao-grande" onClick={onPlayMovie}>Play Movie</button>
-      <button className="botao-grande" onClick={onUploadImage}>Upload Image</button>
+      <button className="btn-play" onClick={onPlayMovie}>Play Movie</button>
+      <button className="btn-play" onClick={onUploadImage}>Upload Image</button>
     </div>
     </div>
   );

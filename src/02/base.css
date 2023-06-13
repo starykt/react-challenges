@@ -1,0 +1,18 @@
+.people-list {
+  list-style: none;
+}
+
+h1 {
+  color: aliceblue;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 60%;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  width: 40%;
+}

@@ -24,7 +24,7 @@ export default function MovingDot() {
       }}>
       <div style={{
         position: 'absolute',
-        backgroundColor: 'red',
+        backgroundColor: 'purple',
         borderRadius: '50%',
         transform: `translate(${position.x}px, ${position.y}px)`,
         left: -10,

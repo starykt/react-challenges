@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import "./base.css";
 import { Link } from 'react-router-dom';
 
 let initialShapes = [
-  { id: 0, type: 'circle', x: 630, y: 150 },
-  { id: 1, type: 'square', x: 730, y: 150 },
-  { id: 2, type: 'circle', x: 830, y: 150 },
+  { id: 0, type: 'circle', x: window.innerWidth / 2 - 50, y: 300 },
+  { id: 1, type: 'square', x: window.innerWidth / 2, y: 300 },
+  { id: 2, type: 'circle', x: window.innerWidth / 2 + 50, y: 300 },
 ];
 
 export default function ShapeEditor() {
@@ -28,29 +29,29 @@ export default function ShapeEditor() {
 
   return (
     <div className='container'>
-    <Link to="/" className='btn-voltar'>Voltar</Link>
     <div className='div-test'>
-      <button className='botao-circle' onClick={handleClick}>
+      <button className='btn-play' onClick={handleClick}>
         Move circles down!
       </button>
       <div className='centralizar'>
       {shapes.map(shape => (
         <div 
-          key={shape.id}
-          style={{
+        key={shape.id}
+        style={{
           background: 'purple',
           position: 'absolute',
           left: shape.x,
           top: shape.y,
           borderRadius:
-            shape.type === 'circle'
-              ? '50%' : '',
+          shape.type === 'circle'
+          ? '50%' : '',
           width: 20,
           height: 20,
         }} />
-      ))}
+        ))}
       </div>
     </div>
+      <Link to="/" className='btn-voltar'>Voltar</Link>
     </div>
   );
 }

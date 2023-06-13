@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import "./base.css";
 
 let nextId = 3;
 const initialList = [
@@ -21,7 +22,7 @@ export default function List4() {
         <div className='container'>
     <Link to="/" className='btn-voltar'>Voltar</Link>
     <div className='div-test'>
-      <button className='botao' onClick={handleClick}>
+      <button className='btn-play' onClick={handleClick}>
         Reverse
       </button>
         {list.map(artwork => (

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import "./base.css";
 
 export default function Chat({contact, message, dispatch}) {
   return (
@@ -14,7 +15,7 @@ export default function Chat({contact, message, dispatch}) {
         }}
       />
       <br />
-      <button className='botao-grande'
+      <button className='base-btn'
         onClick={() => {
           alert(`Enviando "${message}" para ${contact.email}`);
           dispatch({

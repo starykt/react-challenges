@@ -1,6 +1,7 @@
-import { useState } from 'react';
-import { sculptureList } from './data.js';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import { sculptureList } from "./data.js";
+import { Link } from "react-router-dom";
+import "./base.css";
 
 export default function Gallery() {
   const [index, setIndex] = useState(0);
@@ -22,30 +23,29 @@ export default function Gallery() {
   let sculpture = sculptureList[index];
   return (
     <>
-<div className='container'>
-    <Link to="/" className='btn-voltar'>Voltar</Link>
-    <div className='div-test'>
-      <button className='botao' onClick={handleNextClick}>
-        Next
-      </button>
-      <h2>
-        <i>{sculpture.name} </i>
-        by {sculpture.artist}
-      </h2>
-      <h3>
-        ({index + 1} of {sculptureList.length})
-      </h3>
-      <div className='div-test'>
-      <button className='botao-grande' onClick={handleMoreClick}>
-        {showMore ? 'Hide' : 'Show'} details
-      </button>
-      </div>
-      {showMore && <p>{sculpture.description}</p>}
-      <img
-        src={sculpture.url}
-        alt={sculpture.alt}
-      />
-      </div>
+      <div className="container">
+        <Link to="/" className="btn-voltar">
+          Voltar
+        </Link>
+        <div className="div-test">
+          <button className="btn-play" onClick={handleNextClick}>
+            Next
+          </button>
+          <h2>
+            <i>{sculpture.name} </i>
+            by {sculpture.artist}
+          </h2>
+          <h3>
+            ({index + 1} of {sculptureList.length})
+          </h3>
+          <div className="div-test">
+            <button className="btn-play" onClick={handleMoreClick}>
+              {showMore ? "Hide" : "Show"} details
+            </button>
+          </div>
+          {showMore && <p className="description">{sculpture.description}</p>}
+          <img src={sculpture.url} alt={sculpture.alt} />
+        </div>
       </div>
     </>
   );

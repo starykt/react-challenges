@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./base.css";
 
 let initialArtists = [
   { id: 0, name: 'Marta Colvin Andrade' },
@@ -26,7 +27,7 @@ export default function List() {
         {artists.map(artist => (
           <li key={artist.id}>
             {artist.name}{' '}
-            <button className='botao-delete' onClick={() => {
+            <button className='btn-play' onClick={() => {
               setArtists(
                 artists.filter(a =>
                   a.id !== artist.id

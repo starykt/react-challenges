@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
+import "./base.css";
 
 let initialCounters = [
   0, 0, 0
@@ -31,7 +32,7 @@ export default function CounterList() {
       {counters.map((counter, i) => (
         <li key={i}>
           {counter}
-          <button className='botao-left' onClick={() => {
+          <button className='btn-play' onClick={() => {
             handleIncrementClick(i);
           }}>+1</button>
         </li>

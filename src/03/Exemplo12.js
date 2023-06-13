@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-
+import "./base.css";
 import { useState } from 'react';
 
 let nextId = 3;
@@ -38,7 +38,7 @@ export default function List3() {
         value={name}
         onChange={e => setName(e.target.value)}
       />
-      <button className='botao' onClick={handleClick}>
+      <button className='btn-play' onClick={handleClick}>
         Insert
       </button>
       

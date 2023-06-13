@@ -1,5 +1,6 @@
 import { useImmer } from 'use-immer';
 import { Link } from 'react-router-dom';
+import "./base.css";
 
 export default function Form3() {
   const [person, updatePerson] = useImmer({
@@ -38,7 +39,6 @@ export default function Form3() {
   return (
     <div>
         <div className='container'>
-    <Link to="/" className='btn-voltar'>Voltar</Link>
     <div className='div-test'></div>
       <label className='div-test'>
         Name:
@@ -81,6 +81,7 @@ export default function Form3() {
         alt={person.artwork.title}
       />
       </div>
+      <Link to="/" className='btn-voltar'>Voltar</Link>
       </div>
       </div>
   );

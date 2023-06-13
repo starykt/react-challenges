@@ -3,7 +3,7 @@ import Chat from './Chat.js';
 import ContactList from './ContactList.js';
 import { Link } from 'react-router-dom';
 import { initialState, messengerReducer } from './messengerReducer';
-
+import "./base.css";
 
 export default function Messenger() {
   const [state, dispatch] = useReducer(messengerReducer, initialState);
@@ -30,7 +30,7 @@ export default function Messenger() {
 }
 
 const contacts = [
-  {id: 0, name: 'Gabrela', email: 'Gabrela@mail.com'},
-  {id: 1, name: 'Luis', email: 'Luis@mail.com'},
-  {id: 2, name: 'Carol', email: 'Carol@mail.com'},
+  {id: 0, name: 'Luiza', email: 'luizinha@mail.com'},
+  {id: 1, name: 'Odis', email: 'odis@mail.com'},
+  {id: 2, name: 'Lala', email: 'Lala@mail.com'},
 ];

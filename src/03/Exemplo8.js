@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./base.css";
 
 let nextId = 0;
 
@@ -17,7 +18,7 @@ export default function List() {
         value={name}
         onChange={e => setName(e.target.value)}
       />
-      <button className="botao" onClick={() => {
+      <button className="btn-play" onClick={() => {
         setArtists([
           ...artists,
           { id: nextId++, name: name }

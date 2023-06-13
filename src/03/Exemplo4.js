@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./base.css";
 
 export default function Form() {
   const [to, setTo] = useState('Alice');
@@ -22,8 +23,8 @@ export default function Form() {
             <select
               value={to}
               onChange={e => setTo(e.target.value)}>
-              <option value="Nicole">Nicole</option>
-              <option value="Carol">Carol</option>
+              <option value="Bruna">Bruna</option>
+              <option value="Amanda">Amanda</option>
             </select>
           </label>
           <div className='centralizar'>
@@ -33,7 +34,7 @@ export default function Form() {
               onChange={e => setMessage(e.target.value)}
             />
           </div>
-          <button className='botao' type="submit">Enviar</button>
+          <button className='btn-play' type="submit">Enviar</button>
         </form>
       </div>
     </div>
