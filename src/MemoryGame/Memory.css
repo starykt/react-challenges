@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  max-width: 100%;
+  margin-top: 60px;
+  align-items: center;
+  justify-content: center;
+}
+.button-memory {
+  background: #c23866;
+  width: 100px;
+  border: 2px solid #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+  justify-self: right;
+}
+
+.button-memory:hover {
+  background: #d81053;
+  color: #fff;
+}
+.card-grid{
+
+  margin-top: 40px;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.return {
+  margin: 15px;
+}
