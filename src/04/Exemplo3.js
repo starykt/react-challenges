@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 export default function Accordion() {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className='container'>
-    <Link to="/" className='btn-voltar'>Voltar</Link>
-    <div className='div-test'>
+    <div classNameName='container'>
+    <Link to="/" classNameName='btn-voltar'>Voltar</Link>
+    <div classNameName='div-test'>
       <h2>Raimundo, Nicole</h2>
       <Panel
         title="About"
@@ -34,12 +34,12 @@ function Panel({
   onShow
 }) {
   return (
-    <section className="panel">
+    <section classNameName="panel">
       <h3>{title}</h3>
       {isActive ? (
         <p>{children}</p>
       ) : (
-        <button className='botao' onClick={onShow}>
+        <button classNameName='botao' onClick={onShow}>
           Show
         </button>
       )}

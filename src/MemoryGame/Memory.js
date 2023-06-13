@@ -80,7 +80,7 @@ function Memory() {
   }, [])
 
   return (
-    <div class="return">
+    <div className="return">
        <Link to="/" className="btn-voltar">
         Voltar
       </Link>
@@ -98,7 +98,7 @@ function Memory() {
         ))}
       </div>
       <p>Turns: {turns}</p>
-      <button class="button-memory" onClick={shuffleCards}>New Game</button>
+      <button className="button-memory" onClick={shuffleCards}>New Game</button>
       <h1>Memory Game</h1>
 
     </div>

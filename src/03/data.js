@@ -45,7 +45,7 @@ export const sculptureList = [{
     artist: 'Alina Szapocznikow',
     description: "Szapocznikow is known for her sculptures of the fragmented body as a metaphor for the fragility and impermanence of youth and beauty. This sculpture depicts two very realistic large bellies stacked on top of each other, each around five feet (1,5m) tall.",
     url: 'https://i.imgur.com/AlHTAdDm.jpg',
-    alt: 'The sculpture reminds a cascade of folds, quite different from bellies in classical sculptures.'
+    alt: 'The sculpture reminds a cascade of folds, quite different from bellies in classNameical sculptures.'
   }, {
     name: 'Terracotta Army',
     artist: 'Unknown Artist',

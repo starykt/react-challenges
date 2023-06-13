@@ -1,0 +1,45 @@
+.add, .dec{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dec:hover, .add:hover, .reset-button:hover{
+    background-color: #a3045c;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+
+.reset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+.reset-button {
+    font-size: 16px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+  }
+
+.texto{
+    margin-left:20px;
+}
+
+img {
+    justify-content: center;
+    align-items: center;
+  }
+
+.text{
+  color:aliceblue;
+  font-weight: 800;
+  text-align: center;
+}

@@ -1,10 +1,10 @@
 export default function ContactList({contacts, selectedId, dispatch}) {
     return (
-      <section className="contact-list">
+      <section classNameName="contact-list">
         
           {contacts.map((contact) => (
-            <li className="decoration" key={contact.id}>
-              <button className="botao-afastado"
+            <li classNameName="decoration" key={contact.id}>
+              <button classNameName="botao-afastado"
                 onClick={() => {
                   dispatch({
                     type: 'changed_selection',

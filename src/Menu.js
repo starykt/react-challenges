@@ -6,8 +6,8 @@ import "./Menu.css";
 export function Menu() {
   return (
 
-      <div class="all">
-          <div class="card-menu">
+      <div className="all">
+          <div className="card-menu">
             <h3 className="title">Primeiros passos</h3>
             <Link to="/datatime" className="links">
               Data e hora
@@ -20,7 +20,7 @@ export function Menu() {
             </Link>
           </div>
 
-          <div class="card-menu">
+          <div className="card-menu">
             <h3 className="title">Aula 2</h3>
             <Link to="/gallery2" className="links">
              Gallery
@@ -30,7 +30,7 @@ export function Menu() {
             </Link>
           </div>
 
-          <div class="card-menu">
+          <div className="card-menu">
             <h3 className="title">Aula 3</h3>
             <Link to="/toolbar" className="links">
               Toolbar
@@ -76,7 +76,7 @@ export function Menu() {
             </Link>
           </div>
 
-          <div class="card-menu">
+          <div className="card-menu">
             <h3 className="title">Aula 4</h3>
             <Link to="/city" className="links">
               Exemplo 1: City quiz
@@ -92,14 +92,14 @@ export function Menu() {
             </Link>
           </div>
 
-          <div class="card-menu">
+          <div className="card-menu">
             <h3 className="title">Aula 5</h3>
             <Link to="/calculadora" className="links">
               Calculadora
             </Link>
           </div>
 
-          <div class="card-menu">
+          <div className="card-menu">
             <h3 className="title">Aula 6</h3>
             <Link to="/memoria" className="links">
               Memory Game

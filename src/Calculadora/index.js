@@ -115,7 +115,7 @@ const Calculadora = () => {
               <button className="number" onClick={() => addDigit("8")}>
                 8
               </button>
-              <button className="number" onClick={() => addDigit("9")}>
+              <button classNameName="number" onClick={() => addDigit("9")}>
                 9
               </button>
               <button

@@ -1,89 +1,94 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Button } from "./Button";
+import { Link } from "react-router-dom";
+import "./base.css";
 
-export default function Contador() {
-  const [contagemMeninas, setContagemMeninas] = useState(0);
-  const [contagemMeninos, setContagemMeninos] = useState(0);
+export default function Counter() {
+  const [girlCount, setGirlCount] = useState(0);
+  const [boyCount, setBoyCount] = useState(0);
 
-  const usuarioMenina = {
-    nome: "Menina",
-    imageUrl: "https://cdn-icons-png.flaticon.com/512/163/163811.png",
-    tamanhoImagem: 60
+  const girlUser = {
+    name: "Girl",
+    imageUrl: "https://cdn-icons-png.flaticon.com/512/4329/4329449.png",
+    imageSize: 60,
   };
 
-  const usuarioMenino = {
-    nome: "Menino",
-    imageUrl: "https://cdn-icons-png.flaticon.com/512/145/145867.png",
-    tamanhoImagem: 60
+  const boyUser = {
+    name: "Boy",
+    imageUrl: "https://cdn-icons-png.flaticon.com/256/11107/11107584.png",
+    imageSize: 60,
   };
 
-  function incrementarContagemMeninas() {
-    setContagemMeninas(contagemMeninas + 1);
+  function incrementGirlCount() {
+    setGirlCount(girlCount + 1);
   }
 
-  function decrementarContagemMeninas() {
-    if (contagemMeninas > 0) {
-      setContagemMeninas(contagemMeninas - 1);
+  function decrementGirlCount() {
+    if (girlCount > 0) {
+      setGirlCount(girlCount - 1);
     }
   }
 
-  function incrementarContagemMeninos() {
-    setContagemMeninos(contagemMeninos + 1);
+  function incrementBoyCount() {
+    setBoyCount(boyCount + 1);
   }
 
-  function decrementarContagemMeninos() {
-    if (contagemMeninos > 0) {
-      setContagemMeninos(contagemMeninos - 1);
+  function decrementBoyCount() {
+    if (boyCount > 0) {
+      setBoyCount(boyCount - 1);
     }
   }
 
-  function resetarContagem() {
-    setContagemMeninas(0);
-    setContagemMeninos(0);
+  function resetCount() {
+    setGirlCount(0);
+    setBoyCount(0);
   }
 
   return (
-    <div className='container'>
+    <div className="container">
       <div>
-        </div><Link to="/" className='btn-voltar'>Voltar</Link>
-      <div className="div-test">
-        <div className='total'>
-          <p>Total de pessoas: {contagemMeninas + contagemMeninos}</p>
-        </div>
-        <div className='div-col'>
-          <img
-            className="avatar"
-            src={usuarioMenina.imageUrl}
-            alt={"Foto de " + usuarioMenina.nome}
-            style={{ width: usuarioMenina.tamanhoImagem, height: usuarioMenina.tamanhoImagem }}
-          />
-          <p>{usuarioMenina.nome}</p>
-          <div className='button'>
-            <Button status='incremento' onClick={incrementarContagemMeninas} />
-            <Button status='dec' onClick={decrementarContagemMeninas} />
-          </div>
-          <p className='texto'>Total de meninas: {contagemMeninas}</p>
+        <Link to="/" className="back-btn">
+          Back
+        </Link>
+      </div>
+      <div className="test-div">
+        <div className="total">
+          <p className="text">Total people: {girlCount + boyCount}</p>
         </div>
 
-        <div className='div-col'>
+        <div className="div-col">
           <img
             className="avatar"
-            src={usuarioMenino.imageUrl}
-            alt={"Foto de " + usuarioMenino.nome}
-            style={{ width: usuarioMenino.tamanhoImagem, height: usuarioMenino.tamanhoImagem }}
+            src={girlUser.imageUrl}
+            alt={"Photo of " + girlUser.name}
+            style={{ width: girlUser.imageSize, height: girlUser.imageSize }}
           />
-          <p>{usuarioMenino.nome}</p>
-          <div className='button'>
-            <Button status='incremento' onClick={incrementarContagemMeninos} />
-            <Button status='dec' onClick={decrementarContagemMeninos} />
+          <p>{girlUser.name}</p>
+          <div className="button">
+            <Button status="increment" onClick={incrementGirlCount} />
+            <Button status="decrement" onClick={decrementGirlCount} />
           </div>
-          <p className='texto'>Total de meninos: {contagemMeninos}</p>
+          <p className="text">Total girls: {girlCount}</p>
+        </div>
+
+        <div className="div-col">
+          <img
+            className="avatar"
+            src={boyUser.imageUrl}
+            alt={"Photo of " + boyUser.name}
+            style={{ width: boyUser.imageSize, height: boyUser.imageSize }}
+          />
+          <p>{boyUser.name}</p>
+          <div>
+            <Button status="increment" onClick={incrementBoyCount} />
+            <Button status="decrement" onClick={decrementBoyCount} />
+          </div>
+          <p className="text">Total boys: {boyCount}</p>
         </div>
       </div>
-      <div className='reset'>
-        <button onClick={resetarContagem} className='reset-button'>
-          <span className='reset-text'>Resetar</span>
+      <div className="reset">
+        <button onClick={resetCount} className="reset-button">
+          <span className="reset-text">Reset</span>
         </button>
       </div>
     </div>

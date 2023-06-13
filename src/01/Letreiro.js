@@ -16,7 +16,7 @@ function Letreiro() {
     return () => clearInterval(intervalo);
   }, []);
 
-  return    <div className='container'> <Link to="/" className='btn-voltar'>Voltar</Link><div class="div-test"><h1>{texto}</h1></div></div>;
+  return    <div className='container'> <Link to="/" className='btn-voltar'>Voltar</Link><div className="div-test"><h1>{texto}</h1></div></div>;
 }
 
 export default Letreiro;
